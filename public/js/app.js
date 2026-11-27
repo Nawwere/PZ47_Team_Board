@@ -215,3 +215,12 @@ list.addEventListener("click", async event => {
     button.disabled = false;
   }
 });
+// Обработчик фильтров
+filter.addEventListener("change", renderTasks);
+search.addEventListener("input", renderTasks);
+// Кнопка обновления
+document
+  .querySelector("#refresh-button")
+  .addEventListener("click", loadTasks);
+// Начальная загрузка
+loadTasks();
